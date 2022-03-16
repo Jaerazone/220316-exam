@@ -45,7 +45,7 @@
             $("#input_form").hide().slideDown();
             $("#input_form").children().focus();
             clearInterval(timerId);
-            quizstart();
+            quizstart1();
             seconds=0;
         });
 
@@ -69,6 +69,7 @@
                 $("#score").text(`3문제 중에서 ${score}개 맞췄습니다`);
             }
             
+            quizstart2();
             $("#input_form").children().focus().val("");
 
             if(count == 3) {
@@ -82,7 +83,7 @@
             
         });
 
-        function quizstart() {
+        function quizstart1() {
             timerId = setInterval(function(){
                 seconds++;
                 $("#time").text(seconds+`초`);
@@ -91,6 +92,12 @@
             randomnum = Math.floor(Math.random()*quizArray.length);
             $("#quiz").text(quizArray[randomnum].quiz);
         }
+
+        function quizstart2() {
+            randomnum = Math.floor(Math.random()*quizArray.length);
+            $("#quiz").text(quizArray[randomnum].quiz);
+        }
+
     </script>
 </body>
 </html>
