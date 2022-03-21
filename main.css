@@ -7,14 +7,14 @@ h1 {
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
-#time {
+#timer, #time {
     font-size: 40px;
 }
 #quiz {
     font-size: 25px;
 }
 
-#startBt {
+#startBt, #start {
     padding: 5px;
     border-radius: 5px;
     background-color: #ff9400;
